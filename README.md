@@ -20,7 +20,7 @@
 **DSH**：整目录克隆到技能目录（必须包含 `references/`，只拷 SKILL.md 会缺原文库）：
 
 ```bash
-git clone https://github.com/<你的用户名>/classics-guide.git ~/.dsh/skills/classics-guide
+git clone https://github.com/Jason-KK-kk/classics-guide.git ~/.dsh/skills/classics-guide
 ```
 
 **Qoder**：把本目录打包成 ZIP，扩展 → Skills → Add Skills → Upload Skill 导入；或整目录放到你的技能库。
