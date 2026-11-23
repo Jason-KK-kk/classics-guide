@@ -17,13 +17,15 @@
 
 需要支持 Agent Skills（SKILL.md 格式）的环境，如 [DSH](https://github.com/deepseek-ai) 或 Qoder。
 
-**DSH**：整目录克隆到技能目录（必须包含 `references/`，只拷 SKILL.md 会缺原文库）：
+**DSH 一键**（插件形态，自动注册技能）：
 
 ```bash
-git clone https://github.com/Jason-KK-kk/classics-guide.git ~/.dsh/skills/classics-guide
+dsh plugin --profile web add github:Jason-KK-kk/classics-guide
 ```
 
-**Qoder**：把本目录打包成 ZIP，扩展 → Skills → Add Skills → Upload Skill 导入；或整目录放到你的技能库。
+**DSH 手动**：克隆后把 `skills/classics-guide` 整目录拷进 `~/.dsh/skills/`（必须包含 `references/`，只拷 SKILL.md 会缺原文库）。
+
+**Qoder**：把 `skills/classics-guide` 目录打包成 ZIP，扩展 → Skills → Add Skills → Upload Skill 导入。
 
 ## 用法
 
@@ -42,16 +44,18 @@ git clone https://github.com/Jason-KK-kk/classics-guide.git ~/.dsh/skills/classi
 ## 目录结构
 
 ```
-SKILL.md                  技能入口（触发条件与硬性规则）
-progress.md               进度账本模板（真账本在工作区）
-references/
-  curriculum.md           三十次课表与复习规则
-  paths.md                三条学习路径与三家对照
-  ru.md / dao.md / fo.md  三家精讲（29 篇）
-  sages.md                圣贤为人内核卡片
-  sage-dialogues.md       对谈方法与六个完整示范
-  CATALOG.md              原文库书目登记（新增书目只改这里）
-  texts/                  全本原文库（23 个文件）
+package.json / index.js / cordis.patch.yml  DSH 插件壳（一键安装、注册技能）
+skills/classics-guide/
+  SKILL.md                技能入口（触发条件与硬性规则）
+  progress.md             进度账本模板（真账本在工作区）
+  references/
+    curriculum.md         三十次课表与复习规则
+    paths.md              三条学习路径与三家对照
+    ru.md / dao.md / fo.md 三家精讲（29 篇）
+    sages.md              圣贤为人内核卡片
+    sage-dialogues.md     对谈方法与六个完整示范
+    CATALOG.md            原文库书目登记（新增书目只改这里）
+    texts/                全本原文库（23 个文件）
 ```
 
 ## 原文来源与版权

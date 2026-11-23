@@ -1,0 +1,42 @@
+{
+  "name": "classics-guide",
+  "version": "1.0.0",
+  "description": "Confucian, Buddhist and Daoist classics reading companion for DeepSeek Harness: 30-lesson curriculum with spaced retrieval review, 29 guided readings, bundled full-text library and sage-dialogue mode.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "skills/",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "skill",
+    "chinese-classics",
+    "confucianism",
+    "taoism",
+    "buddhism",
+    "reading"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jason-KK-kk/classics-guide.git"
+  },
+  "license": "MIT",
+  "author": "Zhaoly",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill-filesystem": ">=0.1.0-rc.6 <0.3.0 || >=0.2.2-rc.1 <0.3.0"
+  }
+}
